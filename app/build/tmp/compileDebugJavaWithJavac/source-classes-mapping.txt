@@ -1,0 +1,2 @@
+com/jitesh/BuildConfig.java
+ com.jitesh.BuildConfig
