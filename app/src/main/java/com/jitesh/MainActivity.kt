@@ -1,12 +1,11 @@
 package com.jitesh
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
+import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.Random
-
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,15 +33,15 @@ class MainActivity : AppCompatActivity() {
 
         if(isAnswerCorrect){
             backgroundView.setBackgroundColor(Color.GREEN)
-            Toast.makeText(this,"Correct",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Correct", Toast.LENGTH_SHORT).show()
         }else {
             backgroundView.setBackgroundColor(Color.RED)
-            Toast.makeText(this,"Wrong!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Wrong!", Toast.LENGTH_SHORT).show()
         }
 
     }
     private fun assignNumbersToButtons() {
-       val r = Random()
+        val r = Random()
         val leftNum = r.nextInt(10)
         var rightNum = r.nextInt(10)
         while (leftNum == rightNum){
@@ -51,4 +50,5 @@ class MainActivity : AppCompatActivity() {
         btnLeft.text = leftNum.toString()
         btnRight.text = rightNum.toString()
     }
+
 }
